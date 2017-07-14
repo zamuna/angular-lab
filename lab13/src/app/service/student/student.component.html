@@ -1,0 +1,4 @@
+<ul class="students left">
+  <li *ngFor="let std of stds" #id> <a [routerLink]="['profile',std.id]"> {{ std.name }} </a></li>
+</ul>
+<router-outlet class="right"></router-outlet>

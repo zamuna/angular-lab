@@ -1,0 +1,39 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="jumbotron">
+  <div class="container">
+  <form [formGroup]="myformGrp" (ngSubmit)="onSubmit()" class="form">
+    <div class="form-group">
+      <label for="username"  class="control-label">Name:</label>
+      <input type="text" id="idUsername" class="form-control" formControlName="username"
+       [(ngModel)]="user.username" />
+    </div>
+    <div class="form-group text-danger" *ngIf="!myformGrp.controls['username'].valid">
+Required!!
+    </div>
+    <div class="form-group">
+      <label for="username">Email:</label>
+      <input type="text" id="idEmail" class="form-control " formControlName="email"
+      [(ngModel)]="user.email" />
+    </div>
+     <div class="form-group text-danger" *ngIf="!myformGrp.controls['email'].valid">
+       Required
+     </div>
+    <div class="form-group">
+      <label for="username">Post:</label>
+      <textarea id="idPost" class="form-control" formControlName="post" minlength="10" rows="5"
+      [(ngModel)]="user.post"><br/>
+    Post Here
+   </textarea>
+    </div>
+    <div class="form-group text-danger" *ngIf="!myformGrp.controls['post'].valid">
+       Minimum length 10!!!
+     </div>
+       <button type="submit" class="btn btn-primary" [disabled]="!myformGrp.valid" >Submit</button>
+        <button type="button" class="btn btn-primary" (click)="getData()">Get Data</button>
+    </form>
+  </div>
+
+
+   
+  
+</div>
