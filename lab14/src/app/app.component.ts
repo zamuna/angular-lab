@@ -47,18 +47,6 @@ export class AppComponent {
       )
 
   }
-  // getPost() {
-  //   this.httpService.getMyData('http://jsonplaceholder.typicode.com/posts?userId=1').map(data => data.json())
-  //     .subscribe(
-  //     data1 => {
-  //       for (let dd of data1) {
-  //         this.user.post = dd.body;
-  //       }
 
-  //     },
-  //     error => console.log(error),
-  //     () => console.log("Completed")
-  //     )
-  // }
 
 }

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import { Http } from '@angular/http';\
 import { Observable } from 'rxjs/Rx'
 import 'rxjs/add/operator/map'
 
@@ -14,6 +14,6 @@ getMyData(){
      let userResponse = this.http.get('https://jsonplaceholder.typicode.com/users/1').map(res => res.json());
     let postsResponse = this.http.get('https://jsonplaceholder.typicode.com/posts?userId=1').map(res => res.json());
 
-    return Observable.forkJoin([userResponse, postsResponse]);
+    return Observable.forkJoin([userResponse, postsResponse]);\
 }
 }
